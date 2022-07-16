@@ -1,19 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Particles : MonoBehaviour
 {
-    // Start is called before the first frame update
     private ParticleSystemRenderer PSR;
-    void Start()
+    private float InputX;
+
+    private void Start()
     {
         PSR = GetComponent<ParticleSystemRenderer>();
     }
 
-    private float InputX;
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
         InputX = Input.GetAxis("Horizontal");
 
